@@ -13,6 +13,16 @@ namespace dxvk {
     hud                   = config.getOption<std::string>("dxvk.hud", "");
     tearFree              = config.getOption<Tristate>("dxvk.tearFree",               Tristate::Auto);
     hideIntegratedGraphics = config.getOption<bool>   ("dxvk.hideIntegratedGraphics", false);
+    
+    if (env::getEnvVar("DXVK_GPLASYNCCACHE") == "1")
+      gplAsyncCache = true;
+    else
+      gplAsyncCache = config.getOption<bool>("dxvk.gplAsyncCache", false);
+    
+    if (env::getEnvVar("DXVK_ASYNC") == "0")
+      enableAsync = false;
+    else
+      enableAsync = config.getOption<bool>("dxvk.enableAsync", true);
   }
 
 }
