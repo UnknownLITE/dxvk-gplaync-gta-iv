@@ -1,3 +1,5 @@
+[No longer needed](https://github.com/doitsujin/dxvk/issues/3708#issuecomment-2184493021)
+
 # DXVK
 
 A Vulkan-based translation layer for Direct3D 9/10/11 which allows running 3D applications on Linux using Wine.
